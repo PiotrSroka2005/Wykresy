@@ -15,7 +15,6 @@
             </Grid.RowDefinitions>
             <Label FontSize="17" HorizontalOptions="Center" x:Name="slupkowyLabel"/>
             <Grid x:Name="wykresSlupkowy" Grid.Row="1"></Grid>
-
         </Grid>
     </ContentPage>
 

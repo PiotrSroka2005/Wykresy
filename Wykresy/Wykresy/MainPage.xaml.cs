@@ -10,6 +10,10 @@ namespace Wykresy
 {
     public partial class MainPage : TabbedPage
     {
+        public static List<ChartData> ChartData { get; set; }
+        public static string Title = "Wykres danych";
+
+
         public MainPage()
         {
             InitializeComponent();
