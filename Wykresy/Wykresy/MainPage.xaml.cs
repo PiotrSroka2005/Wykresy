@@ -39,7 +39,17 @@ namespace Wykresy
             wykresSlupkowy.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
             wykresSlupkowy.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Absolute) });
             wykresSlupkowy.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
-            
+            Line horizontalLine = new Line
+            {
+                HeightRequest = 1,
+                BackgroundColor = Color.Black
+            };
+            wykresSlupkowy.Children.Add(horizontalLine, 0, 1);
+            if (ChartData.Count > 0)
+            {
+                
+            }
+            slupkowyLabel.Text = Title;
         }
     }
 }
