@@ -19,7 +19,16 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-                
+                <Entry Placeholder="Słupek 1" Grid.Row="0"/>
+                <Entry Placeholder="Słupek 2" Grid.Row="1"/>
+                <Entry Placeholder="Słupek 3" Grid.Row="2"/>
+                <Entry Placeholder="Słupek 4" Grid.Row="3"/>
+                <Entry Placeholder="Dana 1" Grid.Row="0" Grid.Column="1"/>
+                <Entry Placeholder="Dana 2" Grid.Row="1" Grid.Column="1"/>
+                <Entry Placeholder="Dana 3" Grid.Row="2" Grid.Column="1"/>
+                <Entry Placeholder="Dana 4" Grid.Row="3" Grid.Column="1"/>
+            </Grid>
+            <Button Text="Edytuj" Clicked="Button_Clicked" BackgroundColor="Black" TextColor="White" Margin="30" CornerRadius="10"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
