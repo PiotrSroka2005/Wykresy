@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.Shapes;
 
 namespace Wykresy
 {
@@ -26,6 +27,19 @@ namespace Wykresy
                 new ChartData("Słupek 3", 91),
                 new ChartData("Słupek 4", 3),
             };
+        }
+
+        private void WykresSlupkowy_Appearing(object sender, EventArgs e)
+        {
+            wykresSlupkowy.Children.Clear();
+            wykresSlupkowy.ColumnDefinitions.Clear();
+            wykresSlupkowy.RowDefinitions.Clear();
+            for (int i = 0; i < ChartData.Count; i++)
+                wykresSlupkowy.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+            wykresSlupkowy.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+            wykresSlupkowy.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Absolute) });
+            wykresSlupkowy.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
+            
         }
     }
 }
