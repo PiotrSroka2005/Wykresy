@@ -19,6 +19,13 @@ namespace Wykresy
         public MainPage()
         {
             InitializeComponent();
+            ChartData = new List<ChartData>
+            {
+                new ChartData("Słupek 1", 11),
+                new ChartData("Słupek 2", 2),
+                new ChartData("Słupek 3", 91),
+                new ChartData("Słupek 4", 3),
+            };
         }
     }
 }
