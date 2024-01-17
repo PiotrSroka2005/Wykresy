@@ -15,6 +15,13 @@ namespace Wykresy
         public EditChart()
         {
             InitializeComponent();
+
+            for (int i = 0; i < MainPage.ChartData.Count; i++)
+            {
+                (grid.Children[i] as Entry).Text = MainPage.ChartData[i].Name;
+                (grid.Children[i + 4] as Entry).Text = MainPage.ChartData[i].Value.ToString();
+            }
+            titleEntry.Text = MainPage.Title;
         }
     }
 }

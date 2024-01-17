@@ -80,7 +80,7 @@ namespace Wykresy
 
         private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            //Navigation.PushAsync(new EditPage());
+            Navigation.PushAsync(new EditChart());
         }
     }
 }
