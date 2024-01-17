@@ -33,7 +33,13 @@ namespace Wykresy
                 if (!string.IsNullOrWhiteSpace((grid.Children[i] as Entry).Text) && !string.IsNullOrWhiteSpace((grid.Children[i + 4] as Entry).Text))
                     MainPage.ChartData.Add(new ChartData((grid.Children[i] as Entry).Text, double.Parse((grid.Children[i + 4] as Entry).Text)));
             }
-            
+            if (string.IsNullOrWhiteSpace(titleEntry.Text))
+                DisplayAlert("Błąd", "Podaj poprawną nazwe", "OK");
+            else
+            {
+                MainPage.Title = titleEntry.Text;
+                Navigation.PopAsync();
+            }
 
         }
     }
