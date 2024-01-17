@@ -16,22 +16,22 @@ namespace Wykresy
         {
             InitializeComponent();
 
-            for (int i = 0; i < MainPage.ChartData.Count; i++)
+            for (int i = 0; i < MainPage.DataOfCharts.Count; i++)
             {
-                (grid.Children[i] as Entry).Text = MainPage.ChartData[i].Name;
-                (grid.Children[i + 4] as Entry).Text = MainPage.ChartData[i].Value.ToString();
+                (grid.Children[i] as Entry).Text = MainPage.DataOfCharts[i].Name;
+                (grid.Children[i + 4] as Entry).Text = MainPage.DataOfCharts[i].Value.ToString();
             }
             titleEntry.Text = MainPage.Title;
         }
 
         private void Update_Chart(object sender, EventArgs e)
         {
-            MainPage.ChartData = new List<ChartData>();
+            MainPage.DataOfCharts = new List<ChartData>();
 
             for (int i = 0; i < 4; i++)
             {
                 if (!string.IsNullOrWhiteSpace((grid.Children[i] as Entry).Text) && !string.IsNullOrWhiteSpace((grid.Children[i + 4] as Entry).Text))
-                    MainPage.ChartData.Add(new ChartData((grid.Children[i] as Entry).Text, double.Parse((grid.Children[i + 4] as Entry).Text)));
+                    MainPage.DataOfCharts.Add(new ChartData((grid.Children[i] as Entry).Text, double.Parse((grid.Children[i + 4] as Entry).Text)));
             }
             if (string.IsNullOrWhiteSpace(titleEntry.Text))
                 DisplayAlert("Błąd", "Podaj poprawną nazwe", "OK");

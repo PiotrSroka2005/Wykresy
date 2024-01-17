@@ -7,13 +7,13 @@
         <ToolbarItem Text="Zmień dane" Clicked="ToolbarItem_Clicked"/>
     </TabbedPage.ToolbarItems>
 
-    <ContentPage Title="Słupkowy" Appearing="WykresSlupkowy_Appearing">
+    <ContentPage Title="Słupkowy" Appearing="WykresSlupkowy_Odswiez">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Label FontSize="17" HorizontalOptions="Center" x:Name="slupkowyLabel"/>
+            <Label FontSize="17" HorizontalOptions="Center" x:Name="slupkowyNazwa"/>
             <Grid x:Name="wykresSlupkowy" Grid.Row="1"></Grid>
         </Grid>
     </ContentPage>
