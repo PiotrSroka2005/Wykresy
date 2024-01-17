@@ -13,8 +13,8 @@ namespace Wykresy
     {
         public static List<ChartData> ChartData { get; set; }
         public static string Title = "Wykres danych";
-        private Color[] Colors = { Color.Purple, Color.Cyan, Color.Black, Color.Green};
-        private Brush[] Brushes = { Brush.Purple, Brush.Cyan, Brush.Black, Brush.Green};
+        private Color[] Colors = { Color.Purple, Color.Brown, Color.Black, Color.Green};
+        private Brush[] Brushes = { Brush.Purple, Brush.Brown, Brush.Black, Brush.Green};
 
 
         public MainPage()
