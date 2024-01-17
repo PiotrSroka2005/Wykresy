@@ -47,7 +47,33 @@ namespace Wykresy
             wykresSlupkowy.Children.Add(horizontalLine, 0, 1);
             if (ChartData.Count > 0)
             {
-                
+                Grid.SetColumnSpan(horizontalLine, ChartData.Count);
+                double max = ChartData.Max(x => x.Value);
+                for (int i = 0; i < ChartData.Count; i++)
+                {
+                    StackLayout stackLayout = new StackLayout
+                    {
+                        BackgroundColor = Colors[i],
+                        Margin = new Thickness(10),
+                        HeightRequest = ChartData[i].Value / max * 700,
+                        VerticalOptions = LayoutOptions.End,
+                    };
+                    Label label = new Label
+                    {
+                        TextColor = Color.White,
+                        HorizontalOptions = LayoutOptions.Center,
+                        Text = ChartData[i].Value.ToString()
+                    };
+                    stackLayout.Children.Add(label);
+                    Label title = new Label
+                    {
+                        FontSize = 17,
+                        HorizontalOptions = LayoutOptions.Center,
+                        Text = ChartData[i].Name
+                    };
+                    wykresSlupkowy.Children.Add(stackLayout, i, 0);
+                    wykresSlupkowy.Children.Add(title, i, 2);
+                }
             }
             slupkowyLabel.Text = Title;
         }
