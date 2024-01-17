@@ -28,7 +28,7 @@
                 <Entry Placeholder="Dana 3" Grid.Row="2" Grid.Column="1"/>
                 <Entry Placeholder="Dana 4" Grid.Row="3" Grid.Column="1"/>
             </Grid>
-            <Button Text="Edytuj" Clicked="Button_Clicked" BackgroundColor="Black" TextColor="White" Margin="30" CornerRadius="10"/>
+            <Button Text="Edytuj" Clicked="Update_Chart" BackgroundColor="Black" TextColor="White" Margin="30" CornerRadius="10"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

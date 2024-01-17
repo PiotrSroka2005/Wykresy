@@ -23,5 +23,18 @@ namespace Wykresy
             }
             titleEntry.Text = MainPage.Title;
         }
+
+        private void Update_Chart(object sender, EventArgs e)
+        {
+            MainPage.ChartData = new List<ChartData>();
+
+            for (int i = 0; i < 4; i++)
+            {
+                if (!string.IsNullOrWhiteSpace((grid.Children[i] as Entry).Text) && !string.IsNullOrWhiteSpace((grid.Children[i + 4] as Entry).Text))
+                    MainPage.ChartData.Add(new ChartData((grid.Children[i] as Entry).Text, double.Parse((grid.Children[i + 4] as Entry).Text)));
+            }
+            
+
+        }
     }
 }
