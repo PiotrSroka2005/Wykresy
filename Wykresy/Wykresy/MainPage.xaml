@@ -7,5 +7,14 @@
         <ToolbarItem Text="Zmień dane" Clicked="ToolbarItem_Clicked"/>
     </TabbedPage.ToolbarItems>
 
+    <ContentPage Title="Słupkowy" Appearing="WykresSlupkowy_Appearing">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+        </Grid>
+    </ContentPage>
 
 </TabbedPage>
