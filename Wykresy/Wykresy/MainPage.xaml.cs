@@ -77,5 +77,10 @@ namespace Wykresy
             }
             slupkowyLabel.Text = Title;
         }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            //Navigation.PushAsync(new EditPage());
+        }
     }
 }
